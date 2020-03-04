@@ -61,6 +61,9 @@ def findShortestPathUtil(mat, visited, x, y, dist):
     if dist > min_dist:
         return
 
+    if not isSafe(mat, visited, x, y):
+        return
+
     visited[x][y] = True
     assign += 1
 
